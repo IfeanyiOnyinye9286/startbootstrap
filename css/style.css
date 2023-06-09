@@ -3,61 +3,180 @@
    margin: 0;
    box-sizing: border-box;
 }
+body{
+    color: rgb(70, 66, 66);
+    font-weight: 100;
+}
 a{
     text-decoration: none;
-    color: rgb(46, 143, 175);
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(52, 115, 170);
+    font-family: sans-serif;
 }
-.navbar{
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;  
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    background: white;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+label.logo{
+    color: rgb(73, 72, 72);
+    font-size: 15px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:bold;
+}
+nav ul{
+float: right;
+margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  
+}
+nav ul li a{
+    color: rgb(63, 62, 62);
+    font-size: 15px;
+    /* text-transform: uppercase; */
+    cursor: pointer;
+    
+}
+a.active,a:hover{
+    transition: .5S;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(56, 55, 55);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    nav{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    label.logo{
+  font-size: 15px;
+  padding:0 10px;                              
+}
+nav ul li a{
+    font-size: 16px;
+}
+}
+@media(max-width: 1000px){
+ .checkbtn{
+    display: block;
+ }
+ .nav-links{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:black;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 3s;
+ }
+ nav .nav-links li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    
+ }
+ nav .nav-links li a{
+    font-size: 20px;
+    color:white;
+    
+ }
+ nav .nav-links li a.active{
+    background: none;
+    color: #ffffff;
+ }
+ #check:checked ~ ul{
+    left: 0;
+ }
+ /* section{
+    background: url(bg1.jpg) no repeat;
+    background-size: cover;
+    height: calc(100vh-80px);
+ } */
+}
+hr{
+    height: 1px;
+    width: 400px;
+    background-color: white;
+    border: none;
+    margin: 15px 0 10px 0;
+}
+
+/* .navbar{
     display: flex;
     text-align: center;
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    background-color: white;
-    padding: 20px  50px;
+    background-color:white;
+    padding:15px  50px;
+    
 }
 hr{
-    height: 2px;
-    width: 500px;
+    height: 1px;
+    width: 400px;
     background-color: white;
     border: none;
     margin: 15px 0 10px 0;
 }
 .logo a{
-    color: gray;
+    color: grey;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 15px;
 }
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: white
+    
 }
 
 .navbar ul li {
     padding: 0;
+    display: inline-block;
 }
 
 .navbar ul li a {
-    color: gray;
+    color: grey;
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     padding: 0px 15px;
 }
 .navbar ul li a:hover:not(.active) {
-    background-color: white; 
-}
-.navbar ul li a.active {
-    background-color:white;
-}
+    color: rgb(240, 8, 209); 
+} */
 .box{
-height: 100vh;
+height: 130vh;
 margin: 0 auto;
 display: flex;
 justify-content: center;
@@ -65,89 +184,87 @@ align-items: center;
 background-position: center;
 background-image: url(../img/intro-bg.jpg);
 background-size: cover;
-font-size: 50px;
+font-size: 40px;
 }
 .background-text {
-    display: flex;
-justify-content: center;
-align-items: center;
-    color: white;
-    flex-direction: column;   
+    color: white; 
+    overflow: hidden; 
 }
 .second-page{
     display: flex;
-    padding: 150px;
-    background-color: rgb(245, 242, 242);
+    padding: 50px;
+    background-color: whitesmoke;
 }
 .special{
     padding-right: 50px;
     margin: 50px;
 }
 h2{
-    font-size: 50px;
+    font-size: 40px;
 }
 p{
-    font-size: 25px;
+    font-size: 20px;
 }
 .pad{
-    height: 100px; 
-    width: 30px;
+    height: 50px; 
+    width: 10px;
     padding-left: 180px;
 }
 .third-page{
     display: flex;
-    padding: 100px;
+    padding: 50px;
 }
 
 .third-page p{
-    font-size: 25px;
+    font-size: 20px;
     
 }
 .third-page h3{
-    font-size: 40px;
+    font-size: 30px;
     font-family: sans-serif;
 }
 .Mockups{
     padding-right: 50px;
     margin-left: 300px;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 .fourth-page{
     display: flex;
-    padding: 80px;
-    background-color: rgb(247, 245, 245);
+    padding: 20px;
+    background-color: rgb(240, 240, 232);
     justify-content: space-between;
 }
-
 .Google{
     margin: auto 0;
 }
 .Google h4{
-    font-size: 45px;
+    font-size: 35px;
+    padding: 40px;
+    font-family: sans-serif
       
 }
 .Google p{
-   font-size:25px;
-   padding: 40px 0;
+   font-size:18px;
+   padding: 30px 0;
+   font-family: sans-serif;
 }
 .connect{
-    height: 100vh;
+    padding: 0 100px;
     margin: 0 auto;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     background-position:center;
     background-image: url(../img/banner-bg.jpg);
     background-size: cover;
-    height: 300px;
+    height: 250px;
    }
    .connect h5{
-    font-size: 50px;
+    font-size: 40px;
     color: white;
- margin-right: 200px;
-     padding-right: 20px;
+     padding-left: 20px;
    }
-   ul {
+  .last-links{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -155,31 +272,109 @@ p{
     background-color: white
 }
 
-li {
-    float: left;
-}
-
-li a {
+.last-links li {
     display: inline-block;
-    color:rgb(60, 124, 197);
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
 }
 
+.last-links li a {
+    display: inline-block;
+    color:rgb(68, 20, 241);
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
 
 .button button{
-    padding: 15px 35px;
+    padding: 15px 25px;
     border: none;
     background-color: white;
     border-radius: 10px;
     letter-spacing: 3px;
-    font-size: 20px;
+    font-size: 15px;
     margin: 0 10px;
 }
 footer{
-    margin: 100px;
+    margin: 50px;
 }
 .dot{
     font-size: 30px;
+}
+
+@media screen and (min-width:270px) and (max-width:700px){
+    .box{
+        height: 70vh;
+        padding-bottom: 30px;
+    }
+    .background-text {
+color: white;
+        overflow: hidden;
+        font-size: 20px;
+    }
+    /* .navbar ul li {
+        padding: 0;
+        display: none;
+    } */
+    .second-page {
+        flex-direction: column;
+        padding: 3px;
+        background-color: whitesmoke;
+    }
+    .pad {
+        height: 100%;
+        padding-left: 0px;
+        font-size: 5px;
+    }
+    .pad img{
+        width: 90vw;
+    }
+    .third-page{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .third-page img{
+        width: 90vw;
+    }
+    .Mockups{
+        margin-left: 0;
+    }
+    .fourth-page{
+        flex-direction: column;
+    }
+    .phones img{
+width: 90vw;
+    }
+    .connect{
+        flex-direction: column;
+        padding: 0 0 20px 0;
+        height: 100%;
+    }
+    .button button{
+        margin: 10px;
+    }
+    footer{
+margin: 50px 15px;
+    }
+    footer p{
+        font-size: 15px;
+        text-align: center;
+    }
+    .last-links li a{
+        padding: 14px 10px;
+        font-size: 12px;
+    }
+    .button button{
+        padding: 15px 10px;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        font-size: 10px;
+        margin: 5px 5px;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+    }
 }
